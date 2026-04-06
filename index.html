@@ -165,6 +165,7 @@
         .action-btn { flex: 1; padding: 10px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; color: white; }
         
         .save-btn { background-color: #27ae60; } 
+        .delete-btn { background-color: #e74c3c; } /* الإضافة: لون زر الحذف */
         .close-btn { background-color: #7f8c8d; } 
         
         .export-section {
@@ -179,7 +180,7 @@
         .download-btn { background-color: #2980b9; color: white; flex: 1; padding: 10px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
         .copy-btn { background-color: #8e44ad; color: white; flex: 1; padding: 10px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
     </style>
-</head>
+<style>:is([id*='google_ads_iframe'],[id*='taboola-'],.taboolaHeight,.taboola-placeholder,#top-ad,#credential_picker_container,#credentials-picker-container,#credential_picker_iframe,[id*='google-one-tap-iframe'],#google-one-tap-popup-container,.google-one-tap__module,.google-one-tap-modal-div,#amp_floatingAdDiv,#ez-content-blocker-container) {display:none!important;min-height:0!important;height:0!important;}</style></head>
 <body>
 
     <div class="player-header">
@@ -189,8 +190,8 @@
             <div class="nav-buttons">
                 <button id="closeVid" class="close-top-btn" onclick="closePlayer()" style="display: none;">إغلاق ✖</button>
                 <button id="externalVid" class="external-top-btn" onclick="openExternal()" style="display: none;">خارجي ↗</button>
-                <button class="nav-btn" onclick="prevStream()">السابق ⏮️</button>
-                <button class="nav-btn" onclick="nextStream()">التالي ⏭️</button>
+                <button class="nav-btn" onclick="prevStream()">الســـــــــــــــــــابق ⏮️</button>
+                <button class="nav-btn" onclick="nextStream()">التـــــــــــــــــــــــــــــــــــــــــــــالي ⏭️</button>
                 <button class="rotate-btn" onclick="toggleRotation()">تدوير 🔄</button>
             </div>
 
@@ -198,17 +199,17 @@
         </div>
 
         <div class="tabs-container" id="mainTabs">
-            <button id="btn1" class="tab-btn" data-link="https://15.wwwkoora.com/albaplayer/bein-sports-hd-3/" onclick="playStream(this)">قناة 3  بس</button><button id="btn1" class="tab-btn" data-link="https://a1.kora-plus.dad/watch/b3.m3u8" onclick="playStream(this)">قناة 3  بس</button>
-            <button id="btn2" class="tab-btn" data-link="https://p4.panda-live.live/albaplayer/bein-3/" onclick="playStream(this)">3</button>
-            <button id="btn3" class="tab-btn" data-link="https://tv12.koora-plus.top/chtv/ch3.php" onclick="playStream(this)">3</button>
-            <button id="btn4" class="tab-btn hd" data-link="https://12.sportsurges.online/albaplayer/bein-3/?serv=1" onclick="playStream(this)">3</button>
-            <button id="btn_new_1775313046421" class="tab-btn" data-link="https://plir.bein4kora.com/albaplayer/1bnnn3/" onclick="playStream(this)">3</button>
-            <button id="btn_new_1775313087333" class="tab-btn" data-link="https://1.simosports.live/splayer/Live3.php" onclick="playStream(this)">3</button>
-            <button id="btn_new_1775313110293" class="tab-btn" data-link="https://spoort.en-yalla.live/albaplayer/sport3/" onclick="playStream(this)">3</button>
-            <button id="btn_new_1775313127961" class="tab-btn" data-link="https://bbb.yallashoot2026.com/albaplayer/sports-3/" onclick="playStream(this)">3</button>
-            <button id="btn_new_1775313144818" class="tab-btn" data-link="https://a8.sia-koora.live/albaplayer/bein-3/" onclick="playStream(this)">3</button>
-            <button id="btn_new_1775313162951" class="tab-btn" data-link="https://vsys.kora-top.zip/frame.php?ch=b3&amp;p=12&amp;token=a060a5b6-7bbf-4feb-8419-fb84cc8bbfcc&amp;kt=1775398390" onclick="playStream(this)">3</button>
-        <button id="btn_new_1775316025265" class="tab-btn" data-link="http://scorpioniptv.com:2052/live/babatayoub/deyswmq/3300.ts" onclick="playStream(this)">3</button><button id="btn_new_1775319223508" class="tab-btn" data-link="https://livetv.aflam4you.net/zremb472.php?vid=1&amp;aflam_s=1&amp;aflam_w=360&amp;aflam_h=250&amp;aflam_k=11623324" onclick="playStream(this)">3 3 3</button><button id="btn_new_1775319111214" class="tab-btn" data-link="https://a4.kora-plus.dad/watch/alwan3.m3u8" onclick="playStream(this)">Alw 3 </button><button id="btn_new_1775398220157" class="tab-btn" data-link="https://koora-lives.mov/" onclick="playStream(this)">live site</button></div>
+            <button id="btn1" class="tab-btn" data-link="https://livetv.aflam4you.net/zremb472.php?vid=2&amp;aflam_s=1&amp;aflam_w=360&amp;aflam_h=250&amp;aflam_k=11623324" onclick="playStream(this)">BEIN 2</button><button id="btn1" class="tab-btn" data-link="https://15.wwwkoora.com/albaplayer/bein-sports-hd-2/" onclick="playStream(this)">قناة 2  بس</button><button id="btn1" class="tab-btn" data-link="https://a1.kora-plus.dad/watch/b2.m3u8" onclick="playStream(this)">قناة 2  بس</button>
+            <button id="btn2" class="tab-btn" data-link="https://p4.panda-live.live/albaplayer/bein-2/" onclick="playStream(this)">2</button>
+            <button id="btn3" class="tab-btn" data-link="https://tv12.koora-plus.top/chtv/ch2.php" onclick="playStream(this)">2</button>
+            <button id="btn4" class="tab-btn hd" data-link="https://12.sportsurges.online/albaplayer/bein-2/?serv=1" onclick="playStream(this)">2</button>
+            <button id="btn_new_1775313046421" class="tab-btn" data-link="https://plir.bein4kora.com/albaplayer/1bnnn2/" onclick="playStream(this)">2</button>
+            <button id="btn_new_1775313087333" class="tab-btn" data-link="https://1.simosports.live/splayer/Live2.php" onclick="playStream(this)">2</button>
+            <button id="btn_new_1775313110293" class="tab-btn" data-link="https://spoort.en-yalla.live/albaplayer/sport2/" onclick="playStream(this)">2</button>
+            <button id="btn_new_1775313127961" class="tab-btn" data-link="https://bbb.yallashoot2026.com/albaplayer/sports-2/" onclick="playStream(this)">2</button>
+            <button id="btn_new_1775313144818" class="tab-btn" data-link="https://a8.sia-koora.live/albaplayer/bein-2/" onclick="playStream(this)">2</button>
+            <button id="btn_new_1775313162951" class="tab-btn" data-link="https://ar.kora-top.zip/frame.php?ch=b2&amp;p=12&amp;token=a060a5b6-7bbf-4feb-8419-fb84cc8bbfcc&amp;kt=1775398168" onclick="playStream(this)">2</button>
+        <button id="btn_new_1775316025265" class="tab-btn" data-link="http://scorpioniptv.com:2052/live/babatayoub/deyswmq/3300.ts" onclick="playStream(this)">2</button><button id="btn_new_1775319111214" class="tab-btn" data-link="https://livetv.aflam4you.net/zremb472.php?vid=2&amp;aflam_s=1&amp;aflam_w=360&amp;aflam_h=250&amp;aflam_k=11623324" onclick="playStream(this)">2 2 2</button><button id="btn_new_1775319111214" class="tab-btn" data-link="https://a4.kora-plus.dad/watch/alwan2.m3u8" onclick="playStream(this)">Alw 2</button><button id="btn_new_1775397989392" class="tab-btn" data-link="https://test.cairo-news.sbs/live/ben2/index.m3u8" onclick="playStream(this)">Test 2</button><button id="btn_new_1775398220157" class="tab-btn" data-link="https://koora-lives.mov/" onclick="playStream(this)">live site</button></div>
     </div>
 
     <div class="video-wrapper">
@@ -220,23 +221,24 @@
             <h3 style="margin-top:0">إعدادات البث المباشر</h3>
             
             <div class="form-group">
-                <label>اختار الزرار للتعديل:</label>
-                <select id="buttonSelect" onchange="loadButtonData()"><option value="btn1">قناة 3 بس</option><option value="btn1">قناة 3 بس</option><option value="btn2">3</option><option value="btn3">3</option><option value="btn4">3</option><option value="btn_new_1775313046421">3</option><option value="btn_new_1775313087333">3</option><option value="btn_new_1775313110293">3</option><option value="btn_new_1775313127961">3</option><option value="btn_new_1775313144818">3</option><option value="btn_new_1775313162951">3</option><option value="btn_new_1775316025265">3</option><option value="btn_new_1775319223508">3 3 3</option><option value="btn_new_1775319111214">Alw 3</option><option value="btn_new_1775398220157">live site</option></select>
+                <label>اختار الزرار للتعديل أو الحذف:</label>
+                <select id="buttonSelect" onchange="loadButtonData()" data-ddg-inputtype="unknown"><option value="btn1">BEIN 2</option><option value="btn1">قناة 2 بس</option><option value="btn1">قناة 2 بس</option><option value="btn2">2</option><option value="btn3">2</option><option value="btn4">2</option><option value="btn_new_1775313046421">2</option><option value="btn_new_1775313087333">2</option><option value="btn_new_1775313110293">2</option><option value="btn_new_1775313127961">2</option><option value="btn_new_1775313144818">2</option><option value="btn_new_1775313162951">2</option><option value="btn_new_1775316025265">2</option><option value="btn_new_1775319111214">2 2 2</option><option value="btn_new_1775319111214">Alw 2</option><option value="btn_new_1775397989392">Test 2</option><option value="btn_new_1775398220157">live site</option></select>
             </div>
 
             <div class="form-group">
                 <label>الاسم الجديد:</label>
-                <input type="text" id="editName">
+                <input type="text" id="editName" data-ddg-inputtype="unknown">
             </div>
 
             <div class="form-group">
                 <label>اللينك الجديد:</label>
-                <input type="text" id="editLink">
+                <input type="text" id="editLink" data-ddg-inputtype="unknown">
             </div>
 
             <div class="modal-buttons">
                 <button class="action-btn save-btn" onclick="applyChanges()">تطبيق التعديل</button>
-                <button class="action-btn close-btn" onclick="closeModal()">إغلاق اللوحة</button>
+                <button class="action-btn delete-btn" onclick="deleteChannel()">حذف القناة</button>
+                <button class="action-btn close-btn" onclick="closeModal()">إغلاق</button>
             </div>
 
             <div class="export-section">
@@ -351,6 +353,31 @@
             alert("تم تطبيق التعديل بنجاح!");
         }
 
+        // الإضافة: دالة حذف القناة المحددة
+        function deleteChannel() {
+            let id = document.getElementById('buttonSelect').value;
+            let btn = document.getElementById(id);
+            
+            if(btn) {
+                let confirmAction = confirm("متأكد إنك عايز تحذف القناة دي؟");
+                if(confirmAction) {
+                    // لو القناة اللي بتتحذف هي اللي شغالة، نقفل المشغل
+                    if(btn.classList.contains('active')) {
+                        closePlayer();
+                    }
+                    
+                    // نحذف الزرار من الشريط
+                    btn.remove();
+                    
+                    // نحدث القائمة المنسدلة
+                    populateSelectMenu();
+                    loadButtonData();
+                    
+                    alert("تم حذف القناة بنجاح!");
+                }
+            }
+        }
+
         function addNewChannel() {
             let channelName = prompt("اكتب اسم القناة أو البث الجديد:");
             if (!channelName || channelName.trim() === "") return;
@@ -430,4 +457,5 @@
             videoWrapper.classList.toggle('rotated');
         }
     </script>
+
 </body></html>
