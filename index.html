@@ -257,11 +257,32 @@
         .s-del-btn { background-color: #e74c3c; }
         .s-close-btn { background-color: #c0392b; border: 1px solid #ff7675; }
 
+        /* ستايل زر إخفاء وإظهار الشريط الجديد */
+        .toggle-header-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 9999;
+            background-color: #34495e;
+            color: white;
+            border: 1px solid #fff;
+            padding: 6px 12px;
+            font-size: 13px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+        .toggle-header-btn:hover { background-color: #2c3e50; }
+
     </style>
 <style>:is([id*='google_ads_iframe'],[id*='taboola-'],.taboolaHeight,.taboola-placeholder,#top-ad,#credential_picker_container,#credentials-picker-container,#credential_picker_iframe,[id*='google-one-tap-iframe'],#google-one-tap-popup-container,.google-one-tap__module,.google-one-tap-modal-div,#amp_floatingAdDiv,#ez-content-blocker-container) {display:none!important;min-height:0!important;height:0!important;}</style><style>:is([id*='google_ads_iframe'],[id*='taboola-'],.taboolaHeight,.taboola-placeholder,#top-ad,#credential_picker_container,#credentials-picker-container,#credential_picker_iframe,[id*='google-one-tap-iframe'],#google-one-tap-popup-container,.google-one-tap__module,.google-one-tap-modal-div,#amp_floatingAdDiv,#ez-content-blocker-container) {display:none!important;min-height:0!important;height:0!important;}</style></head>
 <body>
 
-    <div class="player-header">
+    <button id="toggleHeaderBtn" class="toggle-header-btn" onclick="toggleHeaderVisibility()">  🔼</button>
+
+    <div class="player-header" id="mainPlayerHeader" style="display: flex;">
         <div class="top-controls">
             <div style="display: flex; gap: 5px; flex-wrap: wrap;">
                 <button class="admin-btn" onclick="openModal()">⚙️ التعديل</button>
@@ -278,7 +299,7 @@
 
                 <button class="nav-btn" onclick="prevStream()">الســـــــــــــــــــابق ⏮️</button>
                 <button class="nav-btn" onclick="nextStream()">التـــــــــــــــــــــــــــــــــــــــــــــالي ⏭️</button>
-                <button class="rotate-btn" onclick="toggleRotation()">تدوير 🔄</button>
+                <button class="rotate-btn" onclick="toggleRotation()">تدوير 🔄</button><button id="adblockBtn" class="adblock-btn disabled" onclick="toggleAdBlock()">🛡️ المانع (مقفول)</button>
             </div>
 
             <button id="adblockBtn" class="adblock-btn" onclick="toggleAdBlock()">🛡️ المانع (شغال)</button>
@@ -313,11 +334,19 @@
 <button id="btn_new_1775848494908_0" class="tab-btn" data-link="https://flu.systemnet.tv/Al.Fajer.4.720p/index.m3u8?autoplay=1" data-open="internal" onclick="playStream(this)"> 4 fagr</button>
 <button id="btn_new_1775848590633_0" class="tab-btn" data-link="https://eventcdn02-nowe.akamaized.net/hls/CH621/index.m3u8?autoplay=1" data-open="internal" onclick="playStream(this)">now 1</button>
 <button id="btn_new_1775848651982_0" class="tab-btn" data-link="https://flu.systemnet.tv/Al.Fajer.1.720p/index.m3u8?autoplay=1" data-open="internal" onclick="playStream(this)">fagr 1</button>
-<button id="btn_new_1775908057931_0" class="tab-btn" data-link="https://yalla.kora-top.zip/frame.php?ch=b3&amp;p=12&amp;token=0a6be43a-3b3f-4bce-9868-cfdb68f85dd9&amp;kt=1775907679" data-open="internal" onclick="playStream(this)">live  1</button><button id="btn_new_1775908057931_1" class="tab-btn" data-link="https://yalla.kora-top.zip/frame.php?ch=b3&amp;p=12&amp;token=0a6be43a-3b3f-4bce-9868-cfdb68f85dd9&amp;kt=1775907714" data-open="internal" onclick="playStream(this)">live  2</button><button id="btn_new_1775908057931_2" class="tab-btn" data-link="https://a2.kora-plus.dad/watch/b3-599.ts" data-open="internal" onclick="playStream(this)">live  3</button><button id="btn_new_1775908057931_3" class="tab-btn" data-link="https://a4.kora-plus.dad/watch/b3-611.ts" data-open="internal" onclick="playStream(this)">live  4</button><button id="btn_new_1775908057931_4" class="tab-btn" data-link="https://eventcdn02-nowe.akamaized.net/hls/CH621/index.m3u8?autoplay=1" data-open="internal" onclick="playStream(this)">live  5</button><button id="btn_new_1775908057931_5" class="tab-btn" data-link="https://w.shahidtv.net/live/34682514/73347194/404.m3u8" data-open="internal" onclick="playStream(this)">live  6</button><button id="btn_new_1776444594053_0" class="tab-btn" data-link="https://vip.kora-top.zip/frame.php?ch=b3&amp;p=12&amp;token=c1577656-03a8-4862-871c-f312776a73a7&amp;kt=1776444458" data-open="internal" onclick="playStream(this)">BN  3 HD 1</button><button id="btn_new_1776444594053_1" class="tab-btn" data-link="https://score808.app/share/stream0.php?token=68747470733a2f2f687265662e6c692f3f68747470733a2f2f76332e73706f727473736f6e6c696e652e636c69636b2f6368616e6e656c732f68642f6864322e706870&amp;s=1" data-open="internal" onclick="playStream(this)">BN  3 HD 2</button><button id="btn_new_1776444594053_2" class="tab-btn" data-link="https://score808.app/share/stream0.php?token=68747470733a2f2f687265662e6c692f3f68747470733a2f2f63646e666263646e2e73332e65752d6e6f7274682d312e616d617a6f6e6177732e636f6d2f62332e68746d6c&amp;s=1" data-open="internal" onclick="playStream(this)">BN  3 HD 3</button></div>
+<button id="btn_new_1775908057931_0" class="tab-btn" data-link="https://yalla.kora-top.zip/frame.php?ch=b3&amp;p=12&amp;token=0a6be43a-3b3f-4bce-9868-cfdb68f85dd9&amp;kt=1775907679" data-open="internal" onclick="playStream(this)">live  1</button>
+<button id="btn_new_1775908057931_1" class="tab-btn" data-link="https://yalla.kora-top.zip/frame.php?ch=b3&amp;p=12&amp;token=0a6be43a-3b3f-4bce-9868-cfdb68f85dd9&amp;kt=1775907714" data-open="internal" onclick="playStream(this)">live  2</button>
+<button id="btn_new_1775908057931_2" class="tab-btn" data-link="https://a2.kora-plus.dad/watch/b3-599.ts" data-open="internal" onclick="playStream(this)">live  3</button>
+<button id="btn_new_1775908057931_3" class="tab-btn" data-link="https://a4.kora-plus.dad/watch/b3-611.ts" data-open="internal" onclick="playStream(this)">live  4</button>
+<button id="btn_new_1775908057931_4" class="tab-btn" data-link="https://eventcdn02-nowe.akamaized.net/hls/CH621/index.m3u8?autoplay=1" data-open="internal" onclick="playStream(this)">live  5</button>
+<button id="btn_new_1775908057931_5" class="tab-btn" data-link="https://w.shahidtv.net/live/34682514/73347194/404.m3u8" data-open="internal" onclick="playStream(this)">live  6</button>
+<button id="btn_new_1776444594053_0" class="tab-btn" data-link="https://vip.kora-top.zip/frame.php?ch=b3&amp;p=12&amp;token=c1577656-03a8-4862-871c-f312776a73a7&amp;kt=1776444458" data-open="internal" onclick="playStream(this)">BN  3 HD 1</button>
+<button id="btn_new_1776444594053_1" class="tab-btn" data-link="https://score808.app/share/stream0.php?token=68747470733a2f2f687265662e6c692f3f68747470733a2f2f76332e73706f727473736f6e6c696e652e636c69636b2f6368616e6e656c732f68642f6864322e706870&amp;s=1" data-open="internal" onclick="playStream(this)">BN  3 HD 2</button>
+<button id="btn_new_1776444594053_2" class="tab-btn" data-link="https://score808.app/share/stream0.php?token=68747470733a2f2f687265662e6c692f3f68747470733a2f2f63646e666263646e2e73332e65752d6e6f7274682d312e616d617a6f6e6177732e636f6d2f62332e68746d6c&amp;s=1" data-open="internal" onclick="playStream(this)">BN  3 HD 3</button></div>
     </div>
 
     <div class="video-wrapper">
-        <iframe id="iframePlayer" src="" allowfullscreen="" style="display: none;" sandbox="allow-scripts allow-same-origin"></iframe>
+        <iframe id="iframePlayer" src="" allowfullscreen="" style="display: none;"></iframe>
         <video id="videoPlayer" controls="" autoplay="" style="display: none;"></video>
     </div>
 
@@ -384,6 +413,19 @@
         let autoSkipTimer = null; 
         let autoSwitchInterval = null; 
         let activeLinkType = 'iframe'; // تتبع نوع المشغل الحالي
+
+        // الدالة الجديدة الخاصة بزر الإخفاء والإظهار
+        function toggleHeaderVisibility() {
+            let header = document.getElementById('mainPlayerHeader');
+            let btn = document.getElementById('toggleHeaderBtn');
+            if (header.style.display === 'none') {
+                header.style.display = 'flex';
+                btn.innerText = 'إخفاء الشريط 🔼';
+            } else {
+                header.style.display = 'none';
+                btn.innerText = 'إظهار الشريط 🔽';
+            }
+        }
 
         function toggleAutoSwitch() {
             let btn = document.getElementById('autoSwitchBtn');
